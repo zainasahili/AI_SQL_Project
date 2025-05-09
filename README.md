@@ -8,10 +8,7 @@ Question: What is the busiest time of day for departures?
 
 ### GPT SQL Response:
 
-''' SQL SELECT strftime('%H', departure_time) AS hour, COUNT(*) AS num_departures
-FROM flight\nGROUP BY hour
-ORDER BY num_departures DESC
-LIMIT 1; '''
+``` SQL SELECT strftime('%H', departure_time) AS hour, COUNT(*) AS num_departures \nFROM flight \nGROUP BY hour \nORDER BY num_departures DESC \nLIMIT 1; ```
 
 SQL Result: [('08', 2)]
 ### Friendly Response: The busiest time for departures is 8 AM.
@@ -22,12 +19,7 @@ Question": Which airport has the most departures?
 
 ### GPT SQL Response:
 
-''' SQL SELECT a.airport_name, COUNT(f.id) AS departure_count
-FROM airport a
-JOIN flight f ON a.id = f.departure_airport_id
-GROUP BY a.id
-ORDER BY departure_count DESC
-LIMIT 1; '''
+``` SQL SELECT a.airport_name, COUNT(f.id) AS departure_count \nFROM airport a \nJOIN flight f ON a.id = f.departure_airport_id \nGROUP BY a.id \nORDER BY departure_count DESC \nLIMIT 1; ```
 
 SQL Result: [('John F. Kennedy International Airport', 2)]
 ### Friendly Response: Hartsfield-Jackson Atlanta International Airport.
