@@ -8,7 +8,7 @@ Question: What is the busiest time of day for departures?
 
 ### GPT SQL Response:
 
-``` SELECT strftime('%H', departure_time) AS hour, COUNT(*) AS num_departures \nFROM flight \nGROUP BY hour \nORDER BY num_departures DESC \nLIMIT 1; ```
+``` SELECT strftime('%H', departure_time) AS hour, COUNT(*) AS num_departures FROM flight GROUP BY hour ORDER BY num_departures DESC LIMIT 1; ```
 
 SQL Result: [('08', 2)]
 ### Friendly Response: The busiest time for departures is 8 AM.
