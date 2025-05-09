@@ -8,7 +8,7 @@ Question: What is the busiest time of day for departures?
 
 ### GPT SQL Response:
 
-''' SELECT strftime('%H', departure_time) AS hour, COUNT(*) AS num_departures
+''' SQL SELECT strftime('%H', departure_time) AS hour, COUNT(*) AS num_departures
 FROM flight\nGROUP BY hour
 ORDER BY num_departures DESC
 LIMIT 1; '''
@@ -22,7 +22,7 @@ Question": Which airport has the most departures?
 
 ### GPT SQL Response:
 
-''' SELECT a.airport_name, COUNT(f.id) AS departure_count
+''' SQL SELECT a.airport_name, COUNT(f.id) AS departure_count
 FROM airport a
 JOIN flight f ON a.id = f.departure_airport_id
 GROUP BY a.id
