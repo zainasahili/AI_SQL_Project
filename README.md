@@ -33,7 +33,7 @@ LIMIT 1;</pre>
 SQL Result: [('John F. Kennedy International Airport', 2)]
 ### Friendly Response: Hartsfield-Jackson Atlanta International Airport.
 
-Even through in the SQL result, it gave the right answer as JFK is found twice as a departure airport, when it processed the result into a friendly response, it asnwered that Hartsfield-Jackson Atlanta International Airport is the airport with most spartures even though this airport is not even in my database.
+Even though in the SQL result, it gave the right answer as JFK is found twice as a departure airport, when it processed the result into a friendly response, it answered that Hartsfield-Jackson Atlanta International Airport is the airport with most spartures even though this airport is not even in my database.
 
 ## Conclusion
 It seems that my databse is not that complicated so GPT was able to process most of the questions in the right way. However, whenevr there was a spelling mistake, that threw the system off when it processed from SQL to friendly response.
